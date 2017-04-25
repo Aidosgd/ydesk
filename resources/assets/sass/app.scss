@@ -6,4 +6,12 @@
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "plugins/bootstrap.min";
+@import "plugins/ionicons.min";
+@import "plugins/animate";
+@import "plugins/slider";
+@import "plugins/owl.carousel";
+@import "plugins/owl.theme";
+@import "plugins/jquery.fancybox";
+@import "plugins/main";
+@import "plugins/responsive";

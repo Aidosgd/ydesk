@@ -15,8 +15,8 @@ return array(
     | Examples: "images", "img/cache"
     |
     */
-   
-    'route' => null,
+
+    'route' => "img/cache",
 
     /*
     |--------------------------------------------------------------------------
@@ -29,10 +29,9 @@ return array(
     | Define as many directories as you like.
     |
     */
-    
+
     'paths' => array(
-        public_path('upload'),
-        public_path('images')
+        public_path('uploads')
     ),
 
     /*

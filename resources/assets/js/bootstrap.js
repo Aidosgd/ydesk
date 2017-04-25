@@ -17,8 +17,13 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
+require('./plugins/vendor/modernizr-2.6.2.min');
 window.$ = window.jQuery = require('jquery');
+require('./plugins/owl.carousel.min');
 require('bootstrap-sass');
+require('./plugins/wow.min');
+require('./plugins/slider');
+require('./plugins/jquery.fancybox');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
