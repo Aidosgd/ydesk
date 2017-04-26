@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h2>{{ $post->node->title }}</h2>
+                        <h2>{{ $post->node->fields->post_url ? $meta_og['title'] : $post->node->title }}</h2>
                         <div class="portfolio-meta">
                             <span>{{ $post->created_at->format('d.m.Y') }}</span>
                         </div>
@@ -19,13 +19,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    @if($post->images()->first())
+                    @if($post->images()->first() || $post->node->fields->post_url)
                         <div class="post-img">
-                            <img class="img-responsive" alt="" src="{{ $post->images()->first()->path }}">
+                            <img class="img-responsive" alt="" src="{{ $post->node->fields->post_url ? $meta_og['image'] : $post->images()->first()->path }}">
                         </div>
                     @endif
                     <div class="post-content">
-                        {!! $post->node->content !!}
+                        {!! $post->node->fields->post_url ? $meta_og['description'] : $post->node->content !!}
                     </div>
                 </div>
             </div>

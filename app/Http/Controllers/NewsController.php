@@ -41,6 +41,33 @@ class NewsController extends Controller
             'keywords' => $post->node->seo_keywords,
         ];
 
+        if($post->node->fields->post_url){
+
+            $sites_html = file_get_contents($post->node->fields->post_url);
+
+            $html = new \DOMDocument();
+            @$html->loadHTML($sites_html);
+            $meta_og = [
+                'title' => '',
+                'description' => '',
+                'image' => '',
+            ];
+
+            foreach($html->getElementsByTagName('meta') as $meta) {
+                if($meta->getAttribute('property')=='og:title'){
+                    $meta_og['title'] = $meta->getAttribute('content');
+                }
+                if($meta->getAttribute('property')=='og:description'){
+                    $meta_og['description'] = $meta->getAttribute('content');
+                }
+                if($meta->getAttribute('property')=='og:image'){
+                    $meta_og['image'] = $meta->getAttribute('content');
+                }
+            }
+
+            return view('news.show', compact('post', 'seo', 'meta_og'));
+        }
+
         return view('news.show', compact('post', 'seo'));
     }
 }
