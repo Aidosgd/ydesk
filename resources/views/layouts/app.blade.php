@@ -8,9 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $seo_variables['title'] }}</title>
-    <meta name="description" content="{{ $seo_variables['description'] }}" />
-    <meta name="keywords" content="{{ $seo_variables['keywords'] }}" />
+    <title>{{ $seo['title'] }}</title>
+    <meta name="description" content="{{ $seo['description'] }}" />
+    <meta name="keywords" content="{{ $seo['keywords'] }}" />
 
     <link href="/css/app.css" rel="stylesheet">
 

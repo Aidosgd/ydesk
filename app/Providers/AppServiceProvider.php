@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\SeoFields;
 use Ibec\Menu\Database\Menu;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;

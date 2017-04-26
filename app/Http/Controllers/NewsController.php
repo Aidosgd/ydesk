@@ -18,7 +18,7 @@ class NewsController extends Controller
             $q->where('status', 1);
         });
 
-        $seo_variables = [
+        $seo = [
             'title' => 'News',
             'description' => '',
             'keywords' => '',
@@ -26,15 +26,21 @@ class NewsController extends Controller
 
         $news = $news->orderBy('display_date', 'desc')->take(5)->get();
 
-        return view('news.index', compact('news', 'seo_variables'));
+        return view('news.index', compact('news', 'seo'));
     }
 
-    public function show($id)
+    public function show($lang, $id)
     {
         $post = Post::whereHas('moderations', function ($q){
             $q->where('status', 1);
         })->where('id', $id)->first();
 
-        return view('news.show', compact('post'));
+        $seo = [
+            'title' => $post->node->seo_title,
+            'description' => $post->node->seo_description,
+            'keywords' => $post->node->seo_keywords,
+        ];
+
+        return view('news.show', compact('post', 'seo'));
     }
 }

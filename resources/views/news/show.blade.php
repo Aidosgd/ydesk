@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    @if($post->images())
+                    @if($post->images()->first())
                         <div class="post-img">
                             <img class="img-responsive" alt="" src="{{ $post->images()->first()->path }}">
                         </div>
