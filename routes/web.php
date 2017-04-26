@@ -19,3 +19,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 $router->get('news', 'NewsController@index');
+$router->get('news/{id}', 'NewsController@show');

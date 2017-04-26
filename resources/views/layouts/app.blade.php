@@ -8,7 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $seo_variables['title'] }}</title>
+    <meta name="description" content="{{ $seo_variables['description'] }}" />
+    <meta name="keywords" content="{{ $seo_variables['keywords'] }}" />
 
     <link href="/css/app.css" rel="stylesheet">
 

@@ -175,6 +175,8 @@ return [
         Ibec\Common\ServiceProvider::class,
         HtmlServiceProvider::class,
         ContactsServiceProvider::class,
+        \App\Providers\AdminMenuServiceProvider::class,
+        \App\Providers\AdminRolesServiceProvider::class,
         /*
          * Application Service Providers...
          */

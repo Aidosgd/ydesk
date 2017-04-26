@@ -2,18 +2,39 @@
 
 namespace App\Http\Controllers;
 
+use Ibec\Content\CategoryNode;
 use Ibec\Content\Post;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        $news = Post::whereHas('contentRoot', function($q){
-            $q->where('slug', 'news');
-        })->with('images')->get();
+        $newsCategory = CategoryNode::where('slug', 'news')->first();
+        $news = Post::whereHas('nodes', function($q)
+        {
+            $q->whereNotNull('title');
+            $q->where(['language_id' => \App::getLocale()]);
+        })->where('category_id', $newsCategory->category_id)->whereHas('moderations', function($q){
+            $q->where('status', 1);
+        });
 
-        dd($news);
+        $seo_variables = [
+            'title' => 'News',
+            'description' => '',
+            'keywords' => '',
+        ];
 
-        return view('news.index', compact('news'));
+        $news = $news->orderBy('display_date', 'desc')->take(5)->get();
+
+        return view('news.index', compact('news', 'seo_variables'));
+    }
+
+    public function show($id)
+    {
+        $post = Post::whereHas('moderations', function ($q){
+            $q->where('status', 1);
+        })->where('id', $id)->first();
+
+        return view('news.show', compact('post'));
     }
 }

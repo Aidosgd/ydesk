@@ -28,11 +28,13 @@
                 <div class="col-md-12">
                     @foreach($news as $item)
                         <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
-                            <div class="blog-post-image">
-                                <a href="/news/{{ $item->id }}">
-                                    <img class="img-responsive" src="{{ $item->images()->first()->path }}" alt="" />
-                                </a>
-                            </div>
+                            @if($item->images())
+                                <div class="blog-post-image">
+                                    <a href="/news/{{ $item->id }}">
+                                        <img class="img-responsive" src="{{ $item->images()->first()->path }}" alt="" />
+                                    </a>
+                                </div>
+                            @endif
                             <div class="blog-content">
                                 <h2 class="blogpost-title">
                                     <a href="/news/{{ $item->id }}">{{ $item->node->title }}</a>
