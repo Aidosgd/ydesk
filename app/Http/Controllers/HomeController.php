@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Ibec\Content\CategoryNode;
+use Ibec\Content\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

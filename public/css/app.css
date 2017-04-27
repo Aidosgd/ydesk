@@ -13971,5 +13971,12 @@ px      68    160    252    */
 ------------------------------------------------------------
 cols    1     2      3      4      5
 px      68    160    252    344    436    */
+#hero-area {
+  padding: 330px 0;
+}
+
+#hero-area:before {
+  content: none;
+}
 
 /*# sourceMappingURL=app.css.map */

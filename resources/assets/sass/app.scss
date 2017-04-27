@@ -15,3 +15,10 @@
 @import "plugins/jquery.fancybox";
 @import "plugins/main";
 @import "plugins/responsive";
+
+#hero-area{
+  padding: 330px 0;
+  &:before{
+    content: none;
+  }
+}

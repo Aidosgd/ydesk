@@ -18,7 +18,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     @foreach($main_menu as $item)
                         <li>
-                            <a href="{{ $item->link }}">{{ $item->node->title }}</a>
+                            <a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
                         </li>
                     @endforeach
                 </ul>
