@@ -56,7 +56,7 @@
                             }
                         ?>
                         <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
-                            @if($item->images()->first() || $item->node->fields->post_url)
+                            @if($item->images()->first() || isset($item->node->fields->post_url))
                                 <div class="blog-post-image">
                                     <a {{ isset($item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ isset($item->node->fields->post_url) ? $item->node->fields->post_url : "/$lang/news/$item->id" }}">
                                         <img class="img-responsive" src="{{ isset($item->node->fields->post_url) ? $meta_og['image'] : $item->images()->first()->path }}" alt="" />

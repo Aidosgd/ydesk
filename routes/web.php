@@ -18,3 +18,6 @@ Route::get('/home', 'HomeController@index');
 
 $router->get('news', 'NewsController@index');
 $router->get('news/{id}', 'NewsController@show');
+
+$router->get('pages', 'PagesController@index');
+$router->get('pages/{slug}', 'PagesController@show');
