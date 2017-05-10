@@ -1,4 +1,4 @@
-# УСТАНОВКА
+# УСТАНОВКА1
 #### 1. Клонируем проект
 ```code
 git clone git@gitlab.ibecsystems.kz:yusup/ibec_cms_53.git
