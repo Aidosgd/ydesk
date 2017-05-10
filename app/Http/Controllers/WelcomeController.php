@@ -39,7 +39,7 @@ class WelcomeController extends Controller
 
         $news = $news->orderBy('display_date', 'desc')->take(3)->get();
 
-        $main_slide = Gallery::with('images')->find(1);
+        $main_slide = Gallery::with('images')->find(1)->images()->first()->path;
 
         return view('welcome', compact('first_block', 'second_block', 'third_block', 'news', 'main_slide'));
     }

@@ -13,6 +13,16 @@
     <meta name="keywords" content="{{ $seo['keywords'] }}" />
 
     <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ $font->font_url }}" rel="stylesheet">
+    <style>
+        body, p{
+            font-family: '{{ $font->font_family }}', serif;
+            font-size: {{ $font->font_size }}px;
+        }
+        h1, h2, h3, h4, h5, h6{
+            font-family: '{{ $font->font_family }}', serif;
+        }
+    </style>
 
     <!-- Scripts -->
     <script>

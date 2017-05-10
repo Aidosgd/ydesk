@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Font;
 use App\Models\SeoFields;
 use Ibec\Menu\Database\Menu;
 use Illuminate\Contracts\View\Factory;
@@ -30,13 +31,15 @@ class AppServiceProvider extends ServiceProvider
 
         app()['seo_fields'] = $seo_fields;
 
+        $font = Font::first();
+
         $seo = [
             'title' => $seo_fields->node->title,
             'description' => $seo_fields->node->description,
             'keywords' => $seo_fields->node->keywords
         ];
 
-        $view->share(compact('seo'));
+        $view->share(compact('seo', 'font'));
     }
 
     /**

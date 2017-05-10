@@ -93,6 +93,7 @@ class AdminMenuServiceProvider extends ServiceProvider
             if(auth('admin')->user()->can('settings.settings.access')) {
                 app('admin_menu')->addSection('settings', 'Settings');
                 app('admin_menu')->addItem('settings', '/admin/seo', 'Seo');
+                app('admin_menu')->addItem('settings', '/admin/font', 'Font');
             }
         });
 

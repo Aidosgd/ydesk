@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section id="hero-area" style="background: url({{ $main_slide->images()->first()->path }}) no-repeat 50%; background-size: cover; background-attachment: fixed;">
+    <section id="hero-area" style="background: url({{ $main_slide }}) no-repeat 50%; background-size: cover; background-attachment: fixed;">
         {{--<div class="container">--}}
             {{--<div class="row">--}}
                 {{--<div class="col-md-12 text-center">--}}
