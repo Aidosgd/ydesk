@@ -55,8 +55,8 @@ class FontController extends \Ibec\Admin\Http\Controllers\Controller{
 		$font_fields = new Font();
 
 		$font_fields->fill([
-			'font_url' => $request->input('font_url'),
-			'font_size' => $request->input('font_size'),
+//			'font_url' => $request->input('font_url'),
+//			'font_size' => $request->input('font_size'),
 			'font_family' => $request->input('font_family'),
 		]);
 		$font_fields->save();
@@ -104,8 +104,8 @@ class FontController extends \Ibec\Admin\Http\Controllers\Controller{
 	public function update(Request $request, Font $font)
 	{
 		$font->fill([
-			'font_url' => $request->input('font_url'),
-			'font_size' => $request->input('font_size'),
+//			'font_url' => $request->input('font_url'),
+//			'font_size' => $request->input('font_size'),
 			'font_family' => $request->input('font_family'),
 		]);
 
@@ -114,7 +114,7 @@ class FontController extends \Ibec\Admin\Http\Controllers\Controller{
 		return redirect(admin_route('font.index'));
 	}
 
-	function destroy(SeoFields $seo) {
+	function destroy(Font $seo) {
 		$seo->delete();
 		return redirect()->back();
 	}
@@ -124,7 +124,7 @@ class FontController extends \Ibec\Admin\Http\Controllers\Controller{
 		$ids = $request->input('selected', []);
 		if ($ids)
 		{
-			SeoFields::whereIn('id', $ids)->delete();
+			Font::whereIn('id', $ids)->delete();
 		}
 	}
 

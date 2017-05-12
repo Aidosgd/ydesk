@@ -19,18 +19,18 @@
             </div>
             <div class="panel-body">
                 <div class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Font url</label>
-                        <div class="col-sm-10">
-                            {!! Form::text('font_url', null, ['class' => 'form-control']) !!}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Font size</label>
-                        <div class="col-sm-10">
-                            {!! Form::text('font_size', null, ['class' => 'form-control']) !!}
-                        </div>
-                    </div>
+                    {{--<div class="form-group">--}}
+                        {{--<label class="col-sm-2 control-label">Font url</label>--}}
+                        {{--<div class="col-sm-10">--}}
+                            {{--{!! Form::text('font_url', null, ['class' => 'form-control']) !!}--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<label class="col-sm-2 control-label">Font size</label>--}}
+                        {{--<div class="col-sm-10">--}}
+                            {{--{!! Form::text('font_size', null, ['class' => 'form-control']) !!}--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Font family</label>
                         <div class="col-sm-10">

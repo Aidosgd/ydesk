@@ -1,10 +1,10 @@
 @extends('admin::base')
 @section('title-right')
-    {{--{!! Html::link(--}}
-    {{--admin_route('font.create'),--}}
-    {{--trans('admin::default.actions.create'),--}}
-    {{--['class' => 'btn btn-success'])--}}
-    {{--!!}--}}
+    {!! Html::link(
+    admin_route('font.create'),
+    trans('admin::default.actions.create'),
+    ['class' => 'btn btn-success'])
+    !!}
 @endsection
 @section('content')
     <div class="wrapper-md">
@@ -35,8 +35,8 @@
                     <tr>
                         <th><label  class="i-checks m-b-none js-check-checkbox"><input onchange="applyBulkCheck($(this))" type="checkbox"><i></i></label></th>
                         <th>{{ trans('acl::default.users.id') }}</th>
-                        <th>Font url</th>
-                        <th>Font size</th>
+                        {{--<th>Font url</th>--}}
+                        {{--<th>Font size</th>--}}
                         <th>Font family</th>
                         <th>Action</th>
                     </tr>
@@ -46,8 +46,8 @@
                         <tr >
                             <td class="v-middle" style="width:20px;"><label class="i-checks m-b-none js-check-checkbox active"><input type="checkbox" data-value="{{$font_f->id}}"><i></i></label></td>
                             <td>{{ $font_f->id }}</td>
-                            <td>{{ $font_f->font_url }}</td>
-                            <td>{{ $font_f->font_size }}</td>
+                            {{--<td>{{ $font_f->font_url }}</td>--}}
+                            {{--<td>{{ $font_f->font_size }}</td>--}}
                             <td>{{ $font_f->font_family }}</td>
                             <td>
                                 {!!
@@ -57,20 +57,20 @@
                                     ['class' => 'btn btn-sm btn-default']
                                   )
                                 !!}
-                                {{--{!!--}}
-                                {{--Html::link(--}}
-                                {{--admin_route('seo.destroy', $font_f->id),--}}
-                                {{--trans('admin::default.actions.destroy'),--}}
-                                {{--['class' => 'btn btn-sm btn-danger destroy-confirm']--}}
-                                {{--)--}}
-                                {{--!!}--}}
+                                {!!
+                                Html::link(
+                                admin_route('font.destroy', $font_f->id),
+                                trans('admin::default.actions.destroy'),
+                                ['class' => 'btn btn-sm btn-danger destroy-confirm']
+                                )
+                                !!}
                             </td>
                         </tr>
                     @empty
                         <tr>
                             <td colspan="8">
                                 <div class="alert alert-danger">
-                                    нет ни одной отрасли
+                                    нет ни одного шрифта
                                 </div>
                             </td>
                         </tr>
