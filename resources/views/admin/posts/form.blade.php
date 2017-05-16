@@ -355,7 +355,15 @@
                             var checked = i==0 ? ' checked' : '';
                             data.imgs[i] = "<div><img src='"+data.imgs[i]+"' onclick='img_radio(this)' style='max-width:100%;' /><input type='radio' class='minilogo' name='minilogo'"+checked+" /></div>";
                         }
-                        aa_display.innerHTML = "<div><p>Illustrations:</p><div id='dis_imgs'>"+data.imgs.join('')+"</div><p>Title:</p><h1 id='dis_title' contenteditable style='padding:8px; border:1px solid #888;'>"+data.title+"</h1><p>Content:</p><p id='dis_desc' contenteditable style='padding:8px; border:1px solid #888;'>"+data.desc+"</p><a onclick='assept(this)' class='btn btn-default'>Assept</a></div>";
+                        aa_display.innerHTML = "<div>" +
+                            "<p>Illustrations:</p>" +
+                            "<div id='dis_imgs'>"+data.imgs.join('')+"</div>" +
+                            "<p>Title:</p>" +
+                            "<h1 id='dis_title' contenteditable style='padding:8px; border:1px solid #888;'>"+data.title+"</h1>" +
+                            "<p>Content:</p>" +
+                            "<p id='dis_desc' contenteditable style='padding:8px; border:1px solid #888;'>"+data.desc+"</p>" +
+                            "<a onclick='assept(this)' class='btn btn-default'>Assept</a>" +
+                            "</div>";
                     } else if (typeof _data == 'string') aa_display.innerHTML = _data;
                 }).fail(function(xhr, status, error) {
                     alert( error );
