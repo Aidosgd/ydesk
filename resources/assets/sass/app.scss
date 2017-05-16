@@ -22,3 +22,26 @@
     content: none;
   }
 }
+figure{
+  height: 360px;
+  .img-wrapper{
+    height: 240px;
+  }
+  figcaption{
+    height: 100px;
+    overflow: hidden;
+  }
+}
+.navbar-header{
+  .navbar-nav{
+    li{
+      a{
+        color: #444;
+        text-transform: uppercase;
+        &:hover{
+          color: #02bdd5;
+        }
+      }
+    }
+  }
+}

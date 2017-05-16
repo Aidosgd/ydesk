@@ -8,19 +8,41 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="navbar-brand">
-                <a href="/" >
-                    <img src="/images/logo.png" alt="">
+                <a href="/" style="margin-top: 0">
+                    <img src="/images/logo.jpg" alt="">
                 </a>
             </div>
+            <ul class="nav navbar-nav">
+                @foreach($main_menu as $item)
+                    <li>
+                        <a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <div class="main-menu">
                 <ul class="nav navbar-nav navbar-right">
-                    @foreach($main_menu as $item)
-                        <li>
-                            <a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
-                        </li>
-                    @endforeach
+                    <li>
+                        <a href="#" class="Facebook">
+                            <i class="ion-social-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Twitter">
+                            <i class="ion-social-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Linkedin">
+                            <i class="ion-social-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Google Plus">
+                            <i class="ion-social-googleplus"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
