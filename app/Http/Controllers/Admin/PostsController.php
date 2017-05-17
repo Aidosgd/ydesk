@@ -700,6 +700,7 @@ class PostsController extends Controller {
                     if ($text[0] != '') $desc_display .= preg_replace('/^content=[\"\']|[\"\']$/ui','',$text[0]);
                 }else{
                     $tags = get_meta_tags($url);
+                    $text = 'Пусто';
                 }
 //                dd($title_display, $desc_display, $imgs_display);
                 echo json_encode(array('title' => $title_display, 'desc' => $desc_display, 'imgs' => $imgs_display));

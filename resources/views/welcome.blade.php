@@ -28,23 +28,31 @@
             <div class="section-heading">
                 <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest News</h1>
             </div>
-            <div class="row">
+            <div class="row slick-slider">
                 @foreach($news as $item)
-                    <div class="col-sm-4 col-xs-12">
+                    <div class="col-sm-3 col-xs-12 item">
                         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
                             <div class="img-wrapper">
                                 @if($item->images()->first() || $item->node->fields->post_url)
-                                    <img class="img-responsive" style="height: 240px; width: 100%" src="{{ empty(!$item->node->fields->post_url) ? strip_tags($item->node->teaser) : $item->images()->first()->path }}" alt="" />
+                                    <img class="img-responsive" src="{{ empty(!$item->node->fields->post_url) ? strip_tags($item->node->teaser) : $item->images()->first()->path }}" alt="" />
                                 @endif
                             </div>
                             <figcaption>
-                                <h4>
-                                    <a {{ isset($item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ isset($item->node->fields->post_url) ? $item->node->fields->post_url : "/$lang/news/$item->id" }}">
-                                        {{ $item->node->title }}
-                                    </a>
-                                </h4>
+                                <div class="row">
+                                    <div class="col-md-3 date">
+                                        <div class="day">{{ $item->created_at->format("d") }}</div>
+                                        <div class="mY">{{ $item->created_at->format("M Y") }}</div>
+                                    </div>
+                                    <div class="col-md-9 title">
+                                        <h4>
+                                            <a {{ isset($item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ isset($item->node->fields->post_url) ? $item->node->fields->post_url : "/$lang/news/$item->id" }}">
+                                                {{ str_limit($item->node->title, 80) }}
+                                            </a>
+                                        </h4>
+                                    </div>
+                                </div>
                                 <p>
-                                    {!! isset($item->node->fields->post_url) ? $item->node->content  : $item->node->teaser !!}
+                                    {!! isset($item->node->fields->post_url) ? str_limit($item->node->content, 70)  : str_limit($item->node->teaser, 70) !!}
                                 </p>
                             </figcaption>
                         </figure>

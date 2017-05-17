@@ -15,6 +15,8 @@
 @import "plugins/jquery.fancybox";
 @import "plugins/main";
 @import "plugins/responsive";
+@import "plugins/slick.scss";
+@import "plugins/slick-theme.scss";
 
 #hero-area{
   padding: 330px 0;
@@ -24,12 +26,44 @@
 }
 figure{
   height: 360px;
+  box-shadow: none;
   .img-wrapper{
     height: 240px;
+    .img-responsive{
+      height: 240px;
+      min-height: 240px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: inherit;
+    }
   }
   figcaption{
-    height: 100px;
+    height: 200px;
     overflow: hidden;
+    padding: 20px 15px;
+    .date{
+      padding: 0;
+      text-align: center;
+      border-right: 2px solid #948e8e;
+      .day{
+        font-size: 16px;
+      }
+      .mY{
+        font-size: 12px;
+      }
+    }
+    .title{
+      padding: 0 0 0 10px;
+      h4{
+        font-size: 14px;
+        text-transform: initial;
+        font-weight: bold;
+      }
+    }
+    p{
+      font-size: 12px;
+    }
   }
 }
 .navbar-header{
@@ -42,6 +76,14 @@ figure{
           color: #02bdd5;
         }
       }
+    }
+  }
+}
+
+.slick-slider{
+  .slick-arrow{
+    &:before{
+      color: #948e8e;
     }
   }
 }

@@ -37,7 +37,7 @@ class WelcomeController extends Controller
             $q->where('status', 1);
         });
 
-        $news = $news->orderBy('display_date', 'desc')->take(3)->get();
+        $news = $news->orderBy('display_date', 'desc')->take(10)->get();
 
         $main_slide = Gallery::with('images')->find(1)->images()->first()->path;
 

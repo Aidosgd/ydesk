@@ -47,6 +47,8 @@
     <!-- slider js -->
     <script src="/js/slider.js"></script>
     <script src="/js/jquery.fancybox.js"></script>
+    <!--slick-->
+    <script src="/js/slick/slick.js"></script>
     <!-- template main js -->
     <script src="/js/main.js"></script>
 </body>
