@@ -87,9 +87,9 @@ figure{
   }
 }
 #top-bar{
-  padding: 15px 3%;
+  padding: 15px 1.5%;
   &.animated-header{
-    padding: 20px 3%;
+    padding: 20px 1.5%;
   }
 }
 .navbar-header{
@@ -128,5 +128,24 @@ figure{
     &:before{
       color: #948e8e;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  #top-bar{
+    padding: 15px 0;
+    &.animated-header{
+      padding: 20px 0;
+    }
+  }
+  .navbar-brand{
+    height: inherit;
+  }
+  .navbar-nav > li > a{
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    display: inline-block;
   }
 }

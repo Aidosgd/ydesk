@@ -11,7 +11,7 @@
                 <img src="/images/logo.jpg" alt="">
             </a>
         </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav hidden-xs">
             @foreach($main_menu as $item)
                 <li>
                     <a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
@@ -20,7 +20,28 @@
         </ul>
     </div>
     <nav class="collapse navbar-collapse navbar-right" role="navigation">
-        <div class="main-menu">
+        <ul class="nav navbar-nav visible-xs">
+            @foreach($main_menu as $item)
+                <li>
+                    <a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
+                </li>
+            @endforeach
+                <li>
+                    <a href="#" class="Facebook">
+                        <i class="ion-social-facebook"></i>
+                    </a>
+                    <a href="#" class="Twitter">
+                        <i class="ion-social-twitter"></i>
+                    </a>
+                    <a href="#" class="Linkedin">
+                        <i class="ion-social-linkedin"></i>
+                    </a>
+                    <a href="#" class="Google Plus">
+                        <i class="ion-social-googleplus"></i>
+                    </a>
+                </li>
+        </ul>
+        <div class="main-menu hidden-xs">
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#" class="Facebook">

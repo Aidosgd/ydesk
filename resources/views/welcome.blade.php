@@ -39,11 +39,11 @@
                             </div>
                             <figcaption>
                                 <div class="row">
-                                    <div class="col-md-3 date">
+                                    <div class="col-xs-3 col-md-3 date">
                                         <div class="day">{{ $item->created_at->format("d") }}</div>
                                         <div class="mY">{{ $item->created_at->format("M Y") }}</div>
                                     </div>
-                                    <div class="col-md-9 title">
+                                    <div class="col-xs-9 col-md-9 title">
                                         <h4>
                                             <a {{ isset($item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ isset($item->node->fields->post_url) ? $item->node->fields->post_url : "/$lang/news/$item->id" }}">
                                                 {{ str_limit($item->node->title, 80) }}
