@@ -14237,6 +14237,11 @@ px      68    160    252    344    436    */
   opacity: 0.75;
 }
 
+body, html,
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
 #hero-area {
   padding: 330px 0;
 }
@@ -14248,6 +14253,7 @@ px      68    160    252    344    436    */
 figure {
   height: 360px;
   box-shadow: none;
+  background: transparent;
 }
 
 figure .img-wrapper {
@@ -14270,10 +14276,23 @@ figure figcaption {
   padding: 20px 15px;
 }
 
+figure figcaption > div.row {
+  margin-bottom: 10px;
+}
+
 figure figcaption .date {
   padding: 0;
   text-align: center;
-  border-right: 2px solid #948e8e;
+  position: relative;
+}
+
+figure figcaption .date:before {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  border-left: 2px solid #948e8e;
 }
 
 figure figcaption .date .day {
@@ -14286,6 +14305,8 @@ figure figcaption .date .mY {
 
 figure figcaption .title {
   padding: 0 0 0 10px;
+  border-left: 2px solid #948e8e;
+  margin-bottom: 0;
 }
 
 figure figcaption .title h4 {
@@ -14296,15 +14317,48 @@ figure figcaption .title h4 {
 
 figure figcaption p {
   font-size: 12px;
+  line-height: 15px;
+}
+
+#top-bar {
+  padding: 15px 3%;
+}
+
+#top-bar.animated-header {
+  padding: 20px 3%;
+}
+
+.navbar-header .navbar-nav {
+  padding-left: 80px;
+  padding-top: 6px;
 }
 
 .navbar-header .navbar-nav li a {
   color: #444;
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 .navbar-header .navbar-nav li a:hover {
   color: #02bdd5;
+}
+
+.navbar-right {
+  margin-right: 0;
+  padding-top: 5px;
+}
+
+.navbar-right li a {
+  padding: 5px;
+}
+
+.navbar-right li a i {
+  color: #007c88;
+  font-size: 25px;
+}
+
+.slick-slider .slick-arrow {
+  top: 130px;
 }
 
 .slick-slider .slick-arrow:before {
