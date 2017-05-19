@@ -27,16 +27,16 @@
                 </li>
             @endforeach
                 <li>
-                    <a href="#" class="Facebook">
+                    <a href="https://www.facebook.com/YDesk-423317454459866/" target="_blank" class="Facebook">
                         <i class="ion-social-facebook"></i>
                     </a>
-                    <a href="#" class="Twitter">
+                    <a href="https://twitter.com/YoursDesk" target="_blank" class="Twitter">
                         <i class="ion-social-twitter"></i>
                     </a>
-                    <a href="#" class="Linkedin">
+                    <a href="https://www.linkedin.com/company-beta/10066832/" target="_blank" class="Linkedin">
                         <i class="ion-social-linkedin"></i>
                     </a>
-                    <a href="#" class="Google Plus">
+                    <a href="https://plus.google.com/114044347762222676343?hl=en" target="_blank" class="Google Plus">
                         <i class="ion-social-googleplus"></i>
                     </a>
                 </li>
@@ -44,22 +44,22 @@
         <div class="main-menu hidden-xs">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" class="Facebook">
+                    <a href="https://www.facebook.com/YDesk-423317454459866/" target="_blank" class="Facebook">
                         <i class="ion-social-facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Twitter">
+                    <a href="https://twitter.com/YoursDesk" target="_blank" class="Twitter">
                         <i class="ion-social-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Linkedin">
+                    <a href="https://www.linkedin.com/company-beta/10066832/" target="_blank" class="Linkedin">
                         <i class="ion-social-linkedin"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="Google Plus">
+                    <a href="https://plus.google.com/114044347762222676343?hl=en" target="_blank" class="Google Plus">
                         <i class="ion-social-googleplus"></i>
                     </a>
                 </li>
