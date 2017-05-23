@@ -34,7 +34,7 @@
                         <i class="ion-social-twitter"></i>
                     </a>
                     <a href="#" class="Linkedin">
-                        <i class="ion-social-linkedin"></i>
+                        <i class="fa fa-linkedin"></i>
                     </a>
                     <a href="#" class="Google Plus">
                         <i class="ion-social-googleplus"></i>
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                     <a href="#" class="Linkedin">
-                        <i class="ion-social-linkedin"></i>
+                        <i class="fa fa-linkedin"></i>
                     </a>
                 </li>
                 <li>

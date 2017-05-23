@@ -12,6 +12,7 @@
     <meta name="description" content="{{ $seo['description'] }}" />
     <meta name="keywords" content="{{ $seo['keywords'] }}" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/app.css" rel="stylesheet">
     @foreach($myFonts as $font)
         <link href="http://fonts.googleapis.com/css?family={{ str_replace('+', ' ', $font)}}" rel="stylesheet">

@@ -87,9 +87,14 @@ figure{
   }
 }
 #top-bar{
-  padding: 15px 1.5%;
+  padding: 0px 1.5%;
   &.animated-header{
-    padding: 20px 1.5%;
+    padding: 5px 1.5%;
+  }
+}
+.main_slider{
+  img{
+    padding-top: 65px;
   }
 }
 .navbar-header{
@@ -147,5 +152,14 @@ figure{
     color: white;
     padding: 15px;
     display: inline-block;
+  }
+  .main_slider{
+    overflow: hidden;
+    img{
+      height: 300px;
+      width: inherit;
+      max-width: inherit;
+      padding-top: 110px;
+    }
   }
 }
