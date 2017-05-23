@@ -14321,15 +14321,42 @@ figure figcaption p {
 }
 
 #top-bar {
-  padding: 0px 1.5%;
+  padding: 2px 1.5%;
+  border-bottom: none;
 }
 
 #top-bar.animated-header {
-  padding: 5px 1.5%;
+  padding: 2px 1.5%;
 }
 
 .main_slider img {
-  padding-top: 65px;
+  padding-top: 56px;
+}
+
+.rt-block {
+  text-align: center;
+}
+
+.rt-block .ct-iconic-icon > img {
+  width: 40px;
+}
+
+.rt-block .ct-iconic-box {
+  border: 1px solid #e3e3e3;
+  border-top: 4px solid #007e85;
+  background: #fcfcfc;
+  border-radius: 4px;
+  border-radius: 4px;
+  padding-top: 15px;
+}
+
+.rt-block .ct-zoom {
+  transition: all 0.5s ease;
+}
+
+.rt-block .ct-zoom:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .navbar-header .navbar-nav {
@@ -14371,10 +14398,13 @@ figure figcaption p {
 
 @media (max-width: 768px) {
   #top-bar {
-    padding: 15px 0;
+    padding: 0px 0;
   }
   #top-bar.animated-header {
-    padding: 20px 0;
+    padding: 5px 0;
+  }
+  .navbar-toggle {
+    margin-top: 17px;
   }
   .navbar-brand {
     height: inherit;
@@ -14393,7 +14423,7 @@ figure figcaption p {
     height: 300px;
     width: inherit;
     max-width: inherit;
-    padding-top: 110px;
+    padding-top: 60px;
   }
 }
 

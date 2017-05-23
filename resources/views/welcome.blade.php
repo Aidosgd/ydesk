@@ -7,6 +7,57 @@
     <section id="about">
         <div class="container">
             <div class="row">
+                <div class="col-md-4">
+                    <div class="rt-block">
+                        <div class="module-surround">
+                            <div class="module-content">
+                                <div class="ct-iconic-box ct-zoom">
+                                    <div class="ct-iconic-icon ct-align-center">
+                                        <img src="http://www.ydesk.net/wp-content/themes/colorway/images/key.png" alt="">
+                                    </div>
+                                    <div class="ct-iconic-text ct-align-center">
+                                        <h3>Joomla! Features</h3>
+                                        <p>Lorem ipsum dolor sit amet,<br> consetetur sadipscing elitr,<br> sed diam nonumy,<br> eirmod tempor invidunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rt-block ">
+                        <div class="module-surround">
+                            <div class="module-content">
+                                <div class="ct-iconic-box ct-zoom">
+                                    <div class="ct-iconic-icon ct-align-center">
+                                        <img src="http://www.ydesk.net/wp-content/themes/colorway/images/iphone.png" alt="">
+                                    </div>
+                                    <div class="ct-iconic-text ct-align-center">
+                                        <h3>Responsive Design</h3>
+                                        <p>Lorem ipsum dolor sit amet,<br> consetetur sadipscing elitr,<br> sed diam nonumy,<br> eirmod tempor invidunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rt-block ">
+                        <div class="module-surround">
+                            <div class="module-content">
+                                <div class="ct-iconic-box ct-zoom">
+                                    <div class="ct-iconic-icon ct-align-center">
+                                        <img src="http://www.ydesk.net/wp-content/themes/colorway/images/desktop.png" alt="" style="opacity: 1;">
+                                    </div>
+                                    <div class="ct-iconic-text ct-align-center">
+                                        <h3>Modern Template</h3>
+                                        <p>Lorem ipsum dolor sit amet,<br> consetetur sadipscing elitr,<br> sed diam nonumy,<br> eirmod tempor invidunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {!! $first_block->node->content !!}
             </div>
 
