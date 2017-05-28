@@ -28,6 +28,12 @@ class WelcomeController extends Controller
             $q->where('slug', 'third-block');
         })->first();
 
+        $fourth_block = Post::whereHas('moderations', function ($q){
+            $q->where('status', 1);
+        })->whereHas('nodes', function ($q){
+            $q->where('slug', 'fourth-block');
+        })->first();
+
         $newsCategory = CategoryNode::where('slug', 'news')->first();
         $news = Post::whereHas('nodes', function($q)
         {
@@ -41,6 +47,6 @@ class WelcomeController extends Controller
 
         $main_slide = Gallery::with('images')->find(1)->images()->first()->path;
 
-        return view('welcome', compact('first_block', 'second_block', 'third_block', 'news', 'main_slide'));
+        return view('welcome', compact('first_block', 'second_block', 'third_block', 'fourth_block', 'news', 'main_slide'));
     }
 }
