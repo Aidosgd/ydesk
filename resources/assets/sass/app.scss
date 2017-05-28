@@ -141,15 +141,55 @@ figure{
 
 .navbar-header{
   .navbar-nav{
-    padding-left: 80px;
+    padding-left: 20px;
     padding-top: 6px;
     li{
       a{
-        color: #444;
+        color: grey;
         text-transform: uppercase;
         font-size: 16px;
+        font-family: Verdana, Geneva, sans-serif;
+        font-weight: 500;
+        position: relative;
+        padding: 0;
+        margin: 15px;
+        &:before{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          top: 25px;
+          left: 0;
+          background: #017d85;
+          visibility: hidden;
+          border-radius: 2px;
+          transform-origin: 0% 0%;
+          transform: scaleX(0);
+          transition: .25s linear;
+        }
         &:hover{
-          color: #02bdd5;
+          color: #017d85;
+          &:before{
+            transform-origin: 0% 0%;
+            visibility: visible;
+            transform: scaleX(1);
+          }
+        }
+      }
+      &:nth-of-type(3){
+        .dropdown-menu{
+          column-count: 2;
+          min-width: 450px;
+          li{
+            &:nth-of-type(6){
+              a{
+                border-bottom: none;
+                &:before{
+                  top: 37px !important;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -270,7 +310,40 @@ figure{
     font-size: 13px;
   }
 }
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; // remove the gap so it doesn't close
+}
 
+.dropdown-menu{
+  background: rgba(255, 255, 255, 0.8);
+  min-width: 190px;
+  li{
+    a{
+      text-transform: inherit !important;
+      font-size: 12px !important;
+      //margin-top: 15px;
+      border-bottom: 1px solid gray;
+      width: 95%;
+      text-align: left;
+      padding: 12px 0 !important;
+      margin: 0 5px !important;
+      font-weight: inherit !important;
+      &:before{
+        top: 40px !important;
+      }
+      &:hover{
+        background: transparent;
+        color: #017d85 !important;
+      }
+    }
+    &:last-child{
+      a{
+        border-bottom: none;
+      }
+    }
+  }
+}
 
 @media (max-width: 768px) {
   #top-bar{

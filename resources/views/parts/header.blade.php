@@ -13,15 +13,20 @@
         </div>
         <ul class="nav navbar-nav hidden-xs">
             @foreach($main_menu as $item)
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown"
-                       role="button" aria-haspopup="true" aria-expanded="false"
-                       href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
-                    <ul class="dropdown-menu">
-                        @foreach($item->children as $child)
-                            <li><a href="/{{ $lang }}/{{ $child->link }}">{{ $child->node->title }}</a></li>
-                        @endforeach
-                    </ul>
+                <li class="{{ $item->children->count() ? 'dropdown' : '' }}">
+                    <a @if($item->children->count())
+                       {{--class="dropdown-toggle" data-toggle="dropdown"--}}
+                       {{--role="button" aria-haspopup="true" aria-expanded="false"--}}
+                       @endif href="/{{ $lang }}/{{ $item->link }}">
+                        {{ $item->node->title }}
+                    </a>
+                    @if($item->children->count())
+                        <ul class="dropdown-menu">
+                            @foreach($item->children as $child)
+                                <li><a href="/{{ $lang }}/{{ $child->link }}">{{ $child->node->title }}</a></li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
             @endforeach
         </ul>
