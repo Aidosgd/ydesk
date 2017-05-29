@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Font;
 use App\Models\SeoFields;
+use Ibec\Media\Gallery;
 use Ibec\Menu\Database\Menu;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
@@ -37,7 +38,9 @@ class AppServiceProvider extends ServiceProvider
             'keywords' => $seo_fields->node->keywords
         ];
 
-        $view->share(compact('seo', 'font'));
+        $main_slide = Gallery::with('images')->find(1)->images()->first()->path;
+
+        $view->share(compact('seo', 'font', 'main_slide'));
 
 
 

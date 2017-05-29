@@ -28,7 +28,9 @@
 <body>
     @include('parts.header')
 
-    @yield('content')
+    <div class="white">
+        @yield('content')
+    </div>
 
     @include('parts.footer')
 
