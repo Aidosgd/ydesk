@@ -101,6 +101,7 @@ figure{
 
 .rt-block{
   text-align: center;
+  position: relative;
   .ct-iconic-icon > img {
     width: 40px;
   }
@@ -109,14 +110,17 @@ figure{
     border-top: 4px solid #007e85;
     background: #fcfcfc;
     border-radius: 4px;
-    border-radius: 4px;
-    padding-top: 15px;
+    padding: 15px;
+    min-height: 240px;
   }
   .ct-zoom{
     transition: all 0.5s ease;
     &:hover{
       transform: scale(1.1);
     }
+  }
+  h3,p{
+    color: gray;
   }
 }
 

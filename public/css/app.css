@@ -14335,6 +14335,7 @@ figure figcaption p {
 
 .rt-block {
   text-align: center;
+  position: relative;
 }
 
 .rt-block .ct-iconic-icon > img {
@@ -14346,8 +14347,8 @@ figure figcaption p {
   border-top: 4px solid #007e85;
   background: #fcfcfc;
   border-radius: 4px;
-  border-radius: 4px;
-  padding-top: 15px;
+  padding: 15px;
+  min-height: 240px;
 }
 
 .rt-block .ct-zoom {
@@ -14357,6 +14358,10 @@ figure figcaption p {
 .rt-block .ct-zoom:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.rt-block h3, .rt-block p {
+  color: gray;
 }
 
 .navbar-header .navbar-nav {
