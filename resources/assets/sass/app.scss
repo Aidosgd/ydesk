@@ -356,12 +356,29 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .info-page{
-  margin-top: 50px;
-  padding-top: 50px;
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-right: 90px;
   h1{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 26px;
     font-weight: bold;
     color: #037c85;
     text-align: center;
+  }
+  h2{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    //font-weight: bold;
+    color: gray;
+    text-align: center;
+  }
+  .post-content{
+    padding-top: 25px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    text-align: justify;
   }
 }
 

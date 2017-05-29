@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-md-3">
                 <h1>{{ $page->node->title }}</h1>
+                <h2>{{ strip_tags($page->node->teaser) }}</h2>
             </div>
             <div class="col-md-9">
                 @if($page->images()->first() || isset($page->node->fields->post_url))
