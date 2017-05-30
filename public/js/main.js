@@ -107,9 +107,18 @@ $(".fancybox").fancybox({
 });
 
 $('.slick-slider').slick({
-    infinite: true,
-    slidesToShow: 4,
+    // infinite: true,
+    // slidesToShow: 4,
+    // slidesToScroll: 1,
+    slidesToShow: 5,
     slidesToScroll: 1,
+    // centerMode: true,
+    variableWidth: true,
+    infinite: false,
+    speed:300,
+    initialSlide:0,
+    centerPadding: '10px',
+    arrows: true,
     responsive: [
         {
             breakpoint: 600,

@@ -6,6 +6,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
+        <div class="support visible-xs">
+            <a href="#">
+                <img src="/css/images/support.png" class="img-responsive" alt="">
+            </a>
+        </div>
         <div class="navbar-brand">
             <a href="/" style="margin-top: 0">
                 <img src="/images/logo.jpg" style="width: 80%; margin-top: 7px;" alt="">
