@@ -49,6 +49,8 @@ class AppServiceProvider extends ServiceProvider
             'filebrowserImageBrowseUrl' => '/' . admin_prefix('media/manager/frame?multiple=0', '/'),
             'filebrowserBrowseUrl' => '/' . admin_prefix('media/manager/frame?multiple=0&mediaType=files', '/'),
             'skin' => 'moono',
+            'allowedContent' => true,
+            'extraAllowedContent' => '*(*);*{*}'
         ];
 
         $adminFonts = Font::all('font_family')->toArray();

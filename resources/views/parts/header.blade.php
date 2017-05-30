@@ -37,18 +37,20 @@
         </ul>
     </div>
     <nav class="collapse navbar-collapse navbar-right" role="navigation">
-        <ul class="nav navbar-nav visible-xs">
+        <ul class="nav navbar-nav visible-xs mobile-menu">
             @foreach($main_menu as $item)
                 <li>
-                    <a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
+                    <a  class="{{ $item->children->count() ? 'dropdown-mobile' : '' }}" href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
                     <ul>
+                        <li class="back-mobile"><a href="#">back</a></li>
+                        <li><a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a></li>
                         @foreach($item->children as $child)
-                            <li>{{ $child->node->title }}</li>
+                            <li><a href="/{{ $lang }}/{{ $child->link }}">{{ $child->node->title }}</a></li>
                         @endforeach
                     </ul>
                 </li>
             @endforeach
-                <li>
+                <li class="social-item">
                     <a href="https://www.facebook.com/YDesk-423317454459866/" target="_blank" class="Facebook">
                         <i class="ion-social-facebook"></i>
                     </a>
