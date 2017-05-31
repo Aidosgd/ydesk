@@ -1,3 +1,4 @@
+<div class="mobile-nav overlay"></div>
 <header id="top-bar" class="navbar-fixed-top animated-header">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

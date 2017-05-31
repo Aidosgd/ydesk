@@ -383,6 +383,20 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 @media (max-width: 768px) {
+  .mobile-nav{
+    &.overlay {
+      display: none;
+      background-color: #000;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1001;
+      opacity: .7;
+      margin-top: -1px;
+      top: 0;
+      position: fixed;
+    }
+  }
   #top-bar{
     padding: 0px 0;
     &.animated-header{
@@ -392,6 +406,21 @@ h1, h2, h3, h4, h5, h6, p{
   .navbar-toggle{
     margin-top: 17px;
     background: grey;
+    &.close-btn{
+      padding: 15px 10px;
+      .icon-bar{
+        &:nth-of-type(3){
+          display: none;
+        }
+        &:nth-of-type(2){
+          transform: rotateZ(50deg);
+        }
+        &:nth-of-type(4){
+          transform: rotateZ(-50deg);
+          margin-top: -2px;
+        }
+      }
+    }
   }
   .navbar-brand{
     height: inherit;
@@ -406,7 +435,7 @@ h1, h2, h3, h4, h5, h6, p{
     max-height: initial !important;
     position: fixed;
     left: 0;
-    right: 0;
+    right: 30px;
     bottom: 0;
     top: 64px;
     overflow: hidden;
