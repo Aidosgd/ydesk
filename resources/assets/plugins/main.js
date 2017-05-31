@@ -42,13 +42,13 @@
 
 
 jQuery(document).ready(function(){
-	"use strict";
-	new WOW().init();
+    "use strict";
+    new WOW().init();
 
 
-(function(){
- jQuery('.smooth-scroll').scrollingTo();
-}());
+    (function(){
+        jQuery('.smooth-scroll').scrollingTo();
+    }());
 
 });
 
@@ -71,7 +71,7 @@ $(document).ready(function(){
     });
 
     $("#clients-logo").owlCarousel({
- 
+
         itemsCustom : false,
         pagination : false,
         items : 5,
@@ -95,8 +95,8 @@ $(".fancybox").fancybox({
 
     closeClick : true,
     helpers : {
-        title : { 
-            type: 'inside' 
+        title : {
+            type: 'inside'
         },
         overlay : {
             css : {
@@ -123,8 +123,32 @@ $('.slick-slider').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
+                arrows: true
             }
         }
     ]
+});
+
+$('.navbar-collapse').on('show.bs.collapse', function () {
+    $('body').css('overflow', 'hidden');
+    $('.mobile-nav').fadeIn();
+    $('.navbar-toggle').addClass('close-btn');
+});
+
+$('.navbar-collapse').on('hidden.bs.collapse', function () {
+    $('body').css('overflow', 'initial');
+    $('.mobile-nav').fadeOut();
+    $('.navbar-toggle').removeClass('close-btn');
+});
+
+$('.dropdown-mobile').on('click', function (e) {
+    e.preventDefault();
+    $('.mobile-menu').addClass('active');
+    $(this).siblings('ul').show();
+});
+
+$('.back-mobile').on('click', function (e) {
+    // e.preventDefault();
+    $('.mobile-menu').removeClass('active');
+    $(this).closest('ul').hide();
 });

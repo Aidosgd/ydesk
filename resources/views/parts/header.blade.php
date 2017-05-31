@@ -43,8 +43,13 @@
                 <li>
                     <a  class="{{ $item->children->count() ? 'dropdown-mobile' : '' }}" href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
                     <ul>
-                        <li class="back-mobile"><a href="#">back</a></li>
-                        <li><a href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a></li>
+
+                        <li style="text-align: center; position: relative">
+                            <i class="fa fa-angle-left back-mobile"></i>
+                            <a style="display: inline-block;border-bottom: 1px solid #000;padding-bottom: 0;padding-right: 0;margin-bottom: 15px;" href="/{{ $lang }}/{{ $item->link }}">
+                                {{ $item->node->title }}
+                            </a>
+                        </li>
                         @foreach($item->children as $child)
                             <li><a href="/{{ $lang }}/{{ $child->link }}">{{ $child->node->title }}</a></li>
                         @endforeach

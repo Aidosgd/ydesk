@@ -14553,9 +14553,10 @@ h1, h2, h3, h4, h5, h6, p {
   .navbar-toggle {
     margin-top: 17px;
     background: grey;
+    padding: 8px 10px;
   }
   .navbar-toggle.close-btn {
-    padding: 15px 10px;
+    padding: 14px 10px;
   }
   .navbar-toggle.close-btn .icon-bar:nth-of-type(3) {
     display: none;
@@ -14573,8 +14574,8 @@ h1, h2, h3, h4, h5, h6, p {
     height: inherit;
   }
   .navbar-brand img {
-    width: 50% !important;
-    margin-top: 15px !important;
+    width: 60% !important;
+    margin-top: 12px !important;
     margin-left: 15px;
   }
   .navbar-right {
@@ -14584,7 +14585,7 @@ h1, h2, h3, h4, h5, h6, p {
     left: 0;
     right: 30px;
     bottom: 0;
-    top: 64px;
+    top: 62px;
     overflow: hidden;
   }
   .mobile-menu {
@@ -14625,6 +14626,12 @@ h1, h2, h3, h4, h5, h6, p {
     transform: translateX(100%);
     padding: 0 15px;
   }
+  .navbar-nav li > ul li .fa {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    color: #000;
+  }
   .navbar-nav li > ul li a:before {
     content: none;
   }
@@ -14639,10 +14646,10 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .main_slider {
     overflow: hidden;
-    height: 300px;
+    height: 210px;
   }
   .main_slider img {
-    height: 300px;
+    height: 210px;
     width: inherit;
     max-width: inherit;
     padding-top: 60px;

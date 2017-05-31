@@ -123,7 +123,7 @@ $('.slick-slider').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
+                arrows: true
             }
         }
     ]
