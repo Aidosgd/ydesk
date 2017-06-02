@@ -1,23 +1,21 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
 
-Route::get('/', 'WelcomeController@index');
 
-Auth::routes();
+foreach(array_merge([''], config('app.locales')) as $language) {
+    Route::group([
+        'middleware' => 'lang',
+        'prefix' => $language,
+    ], function () {
+        Route::get('/', 'WelcomeController@index');
 
-Route::get('/home', 'HomeController@index');
+        Auth::routes();
 
-$router->get('news', 'NewsController@index');
-$router->get('news/{id}', 'NewsController@show');
+        Route::get('/home', 'HomeController@index');
 
-$router->get('pages', 'PagesController@index');
-$router->get('pages/{slug}', 'PagesController@show');
+        Route::get('news', 'NewsController@index');
+        Route::get('news/{id}', 'NewsController@show');
+
+        Route::get('pages', 'PagesController@index');
+        Route::get('pages/{slug}', 'PagesController@show');
+    });
+}
