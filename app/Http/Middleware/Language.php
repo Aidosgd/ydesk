@@ -17,10 +17,10 @@ class Language {
 
 		if(isset($path[0]))
 		{
-			$lang = $path[0];
-			if(in_array($lang, config('app.locales')))
-			{
-				app()->setLocale($lang);
+            $lang = $path[0];
+            if(in_array($lang, config('app.locales')))
+            {
+                app()->setLocale($lang);
 			}
 		}
 

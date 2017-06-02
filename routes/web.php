@@ -6,6 +6,7 @@ foreach(array_merge([''], config('app.locales')) as $language) {
         'middleware' => 'lang',
         'prefix' => $language,
     ], function () {
+
         Route::get('/', 'WelcomeController@index');
 
         Auth::routes();

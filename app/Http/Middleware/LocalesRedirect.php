@@ -24,6 +24,7 @@ class LocalesRedirect {
 
 		if (!in_array($segment, $this->excluded_paths))
 		{
+		    dd($segment);
 			if (!in_array($segment, config('app.locales')))
 				return redirect('/' . app()->getLocale() . '/' . app()['request']->path());
 		}
