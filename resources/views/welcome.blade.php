@@ -69,7 +69,7 @@
                                         </div>
                                         <div class="col-xs-9 col-md-9 title">
                                             <h4>
-                                                <a {{ isset($item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ isset($item->node->fields->post_url) ? $item->node->fields->post_url : "/$lang/news/$item->id" }}">
+                                                <a {{ empty(!$item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ empty(!$item->node->fields->post_url) ? $item->node->fields->post_url : "/news/$item->id" }}">
                                                     {{ str_limit($item->node->title, 57) }}
                                                 </a>
                                             </h4>

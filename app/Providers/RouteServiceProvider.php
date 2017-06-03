@@ -53,41 +53,41 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-//        $router = $this->app['router'];
+        $router = $this->app['router'];
+
+        $segment = $this->app['request']->segment(1);
+
+        if($segment == 'admin'){
+
+            $router->group([
+                'namespace' => $this->namespace,
+                'prefix' => 'admin',
+                'middleware' => config('admin.middlewares')], function($router)
+            {
+                require base_path('routes/admin/web.php');
+            });
+
+            return;
+        }
+
+//        $curLocale = in_array($segment, config('app.locales'))
+//            ? $segment
+//            : config('app.locales', [])[0];
 //
-//        $segment = $this->app['request']->segment(1);
+//        $router->bind('lang', function($lang) use ($curLocale)
+//        {
+//            return $curLocale;
+//        });
 //
-//        if($segment == 'admin'){
+//        $this->app->setLocale($curLocale);
 //
-//            $router->group([
-//                'namespace' => $this->namespace,
-//                'prefix' => 'admin',
-//                'middleware' => config('admin.middlewares')], function($router)
-//            {
-//                require base_path('routes/admin/web.php');
-//            });
-//
-//            return;
-//        }
-//
-////        $curLocale = in_array($segment, config('app.locales'))
-////            ? $segment
-////            : config('app.locales', [])[0];
-////
-////        $router->bind('lang', function($lang) use ($curLocale)
-////        {
-////            return $curLocale;
-////        });
-////
-////        $this->app->setLocale($curLocale);
-////
-////        $this->app['view']->share('lang', 'en');
-//
-////        $group = [
-////            'namespace' => $this->namespace,
-////            'prefix' => '{lang?}',
-////            'middleware' => ['web']
-////        ];
+//        $this->app['view']->share('lang', 'en');
+
+//        $group = [
+//            'namespace' => $this->namespace,
+//            'prefix' => '{lang?}',
+//            'middleware' => ['web']
+//        ];
 //
 //        Route::group($group, function ($router) {
 //            require base_path('routes/web.php');
@@ -100,10 +100,10 @@ class RouteServiceProvider extends ServiceProvider
             require app_path('../routes/web.php');
         });
 
-        Route::group(['namespace' => $this->namespace, 'prefix' => 'admin'], function($router)
-        {
-            require app_path('../routes/admin/web.php');
-        });
+//        Route::group(['namespace' => $this->namespace, 'prefix' => 'admin'], function($router)
+//        {
+//            require app_path('../routes/admin/web.php');
+//        });
 
     }
 

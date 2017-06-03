@@ -23,13 +23,13 @@
                     <a @if($item->children->count())
                        {{--class="dropdown-toggle" data-toggle="dropdown"--}}
                        {{--role="button" aria-haspopup="true" aria-expanded="false"--}}
-                       @endif href="/{{ $lang }}/{{ $item->link }}">
+                       @endif href="/{{ $item->link }}">
                         {{ $item->node->title }}
                     </a>
                     @if($item->children->count())
                         <ul class="dropdown-menu">
                             @foreach($item->children as $child)
-                                <li><a href="/{{ $lang }}/{{ $child->link }}">{{ $child->node->title }}</a></li>
+                                <li><a href="/{{ $child->link }}">{{ $child->node->title }}</a></li>
                             @endforeach
                         </ul>
                     @endif
@@ -41,17 +41,17 @@
         <ul class="nav navbar-nav visible-xs mobile-menu">
             @foreach($main_menu as $item)
                 <li>
-                    <a  class="{{ $item->children->count() ? 'dropdown-mobile' : '' }}" href="/{{ $lang }}/{{ $item->link }}">{{ $item->node->title }}</a>
+                    <a  class="{{ $item->children->count() ? 'dropdown-mobile' : '' }}" href="/{{ $item->link }}">{{ $item->node->title }}</a>
                     <ul>
 
                         <li style="text-align: center; position: relative">
                             <i class="fa fa-angle-left back-mobile"></i>
-                            <a style="display: inline-block;border-bottom: 1px solid #000;padding-bottom: 0;padding-right: 0;margin-bottom: 15px;" href="/{{ $lang }}/{{ $item->link }}">
+                            <a style="display: inline-block;border-bottom: 1px solid #000;padding-bottom: 0;padding-right: 0;margin-bottom: 15px;" href="/{{ $item->link }}">
                                 {{ $item->node->title }}
                             </a>
                         </li>
                         @foreach($item->children as $child)
-                            <li><a href="/{{ $lang }}/{{ $child->link }}">{{ $child->node->title }}</a></li>
+                            <li><a href="/{{ $child->link }}">{{ $child->node->title }}</a></li>
                         @endforeach
                     </ul>
                 </li>

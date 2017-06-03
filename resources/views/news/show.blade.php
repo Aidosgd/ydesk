@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h2>{{ isset($post->node->fields->post_url) ? $meta_og['title'] : $post->node->title }}</h2>
+                        <h2>{{ $post->node->title }}</h2>
                         <div class="portfolio-meta">
                             <span>{{ $post->created_at->format('d.m.Y') }}</span>
                         </div>
@@ -21,11 +21,11 @@
                 <div class="col-md-12">
                     @if($post->images()->first() || isset($post->node->fields->post_url))
                         <div class="post-img">
-                            <img class="img-responsive" alt="" src="{{ isset($post->node->fields->post_url) ? $meta_og['image'] : $post->images()->first()->path }}">
+                            <img class="img-responsive" alt="" src="{{ empty(!$post->node->fields->post_url) ? strip_tags($post->node->teaser) : $post->images()->first()->path }}">
                         </div>
                     @endif
                     <div class="post-content">
-                        {!! isset($post->node->fields->post_url) ? $meta_og['description'] : $post->node->content !!}
+                        {!! isset($post->node->fields->post_url) ? $post->node->content  : $post->node->teaser !!}
                     </div>
                 </div>
             </div>

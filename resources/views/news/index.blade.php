@@ -21,14 +21,19 @@
                         <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
                             @if($item->images()->first() || isset($item->node->fields->post_url))
                                 <div class="blog-post-image">
-                                    <a {{ isset($item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ isset($item->node->fields->post_url) ? $item->node->fields->post_url : "/$lang/news/$item->id" }}">
+                                    <a {{ empty(!$item->node->fields->post_url) ? 'target=blank' : "" }}
+                                       href="{{ empty(!$item->node->fields->post_url) ?
+                                        $item->node->fields->post_url :
+                                         "/news/$item->id" }}">
                                         <img class="img-responsive" src="{{ empty(!$item->node->fields->post_url) ? strip_tags($item->node->teaser) : $item->images()->first()->path }}" alt="" />
                                     </a>
                                 </div>
                             @endif
                             <div class="blog-content">
                                 <h2 class="blogpost-title">
-                                    <a {{ isset($item->node->fields->post_url) ? 'target=blank' : "" }} href="{{ isset($item->node->fields->post_url) ? $item->node->fields->post_url : "/$lang/news/$item->id" }}">{{ $item->node->title }}</a>
+                                    <a {{ empty(!$item->node->fields->post_url) ? 'target=blank' : "" }}
+                                       href="{{ empty(!$item->node->fields->post_url) ?
+                                       $item->node->fields->post_url : "/news/$item->id" }}">{{ $item->node->title }}</a>
                                 </h2>
                                 <div class="blog-meta">
                                     <span>{{ $item->created_at->format('d.m.Y') }}</span>

@@ -29,7 +29,7 @@ class PagesController extends Controller
         return view('pages.index', compact('news', 'seo'));
     }
 
-    public function show($lang, $slug)
+    public function show($slug)
     {
         $page = Post::whereHas('nodes', function($q) use ($slug)
         {

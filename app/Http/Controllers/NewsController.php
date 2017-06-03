@@ -29,7 +29,7 @@ class NewsController extends Controller
         return view('news.index', compact('news', 'seo'));
     }
 
-    public function show($lang, $id)
+    public function show($id)
     {
         $post = Post::whereHas('moderations', function ($q){
             $q->where('status', 1);
